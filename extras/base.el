@@ -180,3 +180,6 @@
   :ensure t
   :config
   (setq wgrep-auto-save-buffer t))
+
+(use-package nix-mode
+  :ensure t)

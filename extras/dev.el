@@ -72,7 +72,9 @@
   :ensure t)
 
 (use-package slime
-  :ensure t)
+  :ensure t
+  :config
+  (setq inferior-lisp-program "sbcl"))
 
 ;; Emacs ships with a lot of popular programming language modes. If it's not
 ;; built in, you're almost certain to find a mode for the language you're
