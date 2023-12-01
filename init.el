@@ -49,6 +49,7 @@
 
 ;; If you want to turn off the welcome screen, uncomment this
 (setopt inhibit-splash-screen t)
+(setopt make-backup-files nil)
 
 (setopt initial-major-mode 'fundamental-mode)  ; default mode for the *scratch* buffer
 (setopt display-time-default-load-average nil) ; this information is useless for most
@@ -255,3 +256,4 @@ If the new path's directories does not exist, create them."
 
 (require 'whitespace)
 (keymap-global-set "C-c w" 'whitespace-mode)
+(keymap-global-set "C-c c" 'compile)
