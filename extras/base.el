@@ -181,5 +181,18 @@
   :config
   (setq wgrep-auto-save-buffer t))
 
+;; NixMode
 (use-package nix-mode
   :ensure t)
+
+;; multiple-cursors
+(use-package multiple-cursors
+  :ensure t
+  :init
+  (global-set-key (kbd "C-d") 'mc/mark-next-like-this))
+
+;; move-text
+(use-package move-text
+  :ensure t
+  :init
+  (move-text-default-bindings))
