@@ -10,9 +10,11 @@
 	electric-newline-and-maybe-indent
 	move-text-down
 	move-text-up
+	slime-autodoc-space
 	slime-space
 	))
 
 (setq mc/cmds-to-run-once
       '(
+	slime-compile-defun
 	))

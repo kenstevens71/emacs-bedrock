@@ -257,3 +257,5 @@ If the new path's directories does not exist, create them."
 (require 'whitespace)
 (keymap-global-set "C-c w" 'whitespace-mode)
 (keymap-global-set "C-c c" 'compile)
+(global-set-key [M-S-up] 'duplicate-dwim)
+(global-set-key [M-S-down] 'duplicate-dwim)
