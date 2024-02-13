@@ -95,8 +95,10 @@
   ;; no :ensure t here because it's built-in
 
   ;; Configure hooks to automatically turn-on eglot for selected modes
-  ; :hook
-  ; (((python-mode ruby-mode elixir-mode) . eglot))
+  ;; :hook
+  ;; (((python-mode ruby-mode elixir-mode) . eglot))
+  :hook
+  (((python-ts-mode) . eglot-ensure))
 
   :custom
   (eglot-send-changes-idle-time 0.1)
@@ -107,4 +109,30 @@
   ;; Sometimes you need to tell Eglot where to find the language server
   ; (add-to-list 'eglot-server-programs
   ;              '(haskell-mode . ("haskell-language-server-wrapper" "--lsp")))
+  (add-to-list 'eglot-server-programs
+               '(python-ts-mode . ("pylsp")))
   )
+
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+
+(defun python-format ()
+  "Format python code using `black'."
+  (interactive)
+  (shell-command-on-region
+   ;; beginning and end of buffer
+   (point-min)
+   (point-max)
+   ;; command and parameters
+   "isort - | black -"
+   ;; output buffer
+   (current-buffer)
+   ;; replace?
+   t
+   ;; name of the error buffer
+   "*Black Error Buffer*"
+   ;; show error buffer?
+   nil))
+
+;;; dev.el ends here
