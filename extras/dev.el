@@ -94,6 +94,7 @@
 (use-package eglot
   ;; no :ensure t here because it's built-in
 
+  :bind ("C-S-F" . eglot-format-buffer)
   ;; Configure hooks to automatically turn-on eglot for selected modes
   ;; :hook
   ;; (((python-mode ruby-mode elixir-mode) . eglot))
@@ -135,4 +136,8 @@
    ;; show error buffer?
    nil))
 
+(add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
+(add-hook 'python-ts-mode-hook
+	  (lambda ()
+	    (define-key python-ts-mode-map (kbd "C-c C-SPC") 'python-fix-imports)))
 ;;; dev.el ends here

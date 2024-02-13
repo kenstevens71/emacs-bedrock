@@ -16,5 +16,6 @@
 
 (setq mc/cmds-to-run-once
       '(
+	mc/mark-next-lines
 	slime-compile-defun
 	))
