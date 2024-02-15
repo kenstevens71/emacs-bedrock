@@ -77,6 +77,10 @@
   :config
   (setq inferior-lisp-program "sbcl"))
 
+(use-package python-ts-mode
+  :bind (:map python-ts-mode-map
+	      ("M-C-r" . python-shell-send-region)))
+
 ;; Emacs ships with a lot of popular programming language modes. If it's not
 ;; built in, you're almost certain to find a mode for the language you're
 ;; looking for with a quick Internet search.

@@ -221,7 +221,7 @@
   (setq dired-sidebar-use-term-integration t)
   (setq dired-sidebar-use-custom-font t))
 
-(all-the-icons
+;; all-the-icons
  (use-package all-the-icons-dired
    :ensure t)
 
