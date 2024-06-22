@@ -26,6 +26,8 @@
 (when (< emacs-major-version 29)
   (error (format "Emacs Bedrock only works with Emacs 29 and newer; you have version ~a" emacs-major-version)))
 
+;;; Code:
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;;   Basic settings
@@ -249,7 +251,7 @@ If the new path's directories does not exist, create them."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(vscode-icon all-the-icons dired-sidebar pyimport importmagic flycheck markdown-mode move-text multiple-cursors which-key)))
+   '(company lsp-mode vscode-icon all-the-icons dired-sidebar pyimport importmagic flycheck markdown-mode move-text multiple-cursors which-key)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
