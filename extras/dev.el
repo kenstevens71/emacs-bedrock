@@ -98,6 +98,9 @@
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
 
+(use-package cc-mode
+  :bind (:map c-mode-map
+	 ("C-d" . mc/mark-next-like-this)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;;   Eglot, the built-in LSP client for Emacs
