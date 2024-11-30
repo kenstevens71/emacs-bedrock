@@ -1,4 +1,4 @@
-;;;  ________                                                _______                 __                            __
+;;  ________                                                _______                 __                            __
 ;;; /        |                                              /       \               /  |                          /  |
 ;;; $$$$$$$$/ _____  ____   ______   _______  _______       $$$$$$$  | ______   ____$$ | ______   ______   _______$$ |   __
 ;;; $$ |__   /     \/    \ /      \ /       |/       |      $$ |__$$ |/      \ /    $$ |/      \ /      \ /       $$ |  /  |
@@ -217,7 +217,7 @@ If the new path's directories does not exist, create them."
 
 ;; UI/UX enhancements mostly focused on minibuffer and autocompletion interfaces
 ;; These ones are *strongly* recommended!
-(load-file (expand-file-name "extras/base.el" user-emacs-directory))
+;; (load-file (expand-file-name "extras/base.el" user-emacs-directory))
 
 ;; Packages for software development
 (load-file (expand-file-name "extras/dev.el" user-emacs-directory))
@@ -229,12 +229,12 @@ If the new path's directories does not exist, create them."
 ;; Org-mode configuration
 ;; WARNING: need to customize things inside the elisp file before use! See
 ;; the file extras/org-intro.txt for help.
-;(load-file (expand-file-name "extras/org.el" user-emacs-directory))
+(load-file (expand-file-name "extras/org.el" user-emacs-directory))
 
 ;; Email configuration in Emacs
 ;; WARNING: needs the `mu' program installed; see the elisp file for more
 ;; details.
-;(load-file (expand-file-name "extras/email.el" user-emacs-directory))
+(load-file (expand-file-name "extras/email.el" user-emacs-directory))
 
 ;; Tools for academic researchers
 ;(load-file (expand-file-name "extras/researcher.el" user-emacs-directory))
